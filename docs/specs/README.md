@@ -26,6 +26,6 @@ docs/specs/NNN-slug/
 
 | ID | Carpeta | Título | Estado |
 |---|---|---|---|
-| — | — | Aún no hay especificaciones de desarrollo | — |
+| SPEC-001 | 001-flujo-creacion | Flujo de creación de publicación | Aprobada |
 
 Plantillas: `skills/spec-generator/spec-template.md`, `skills/spec-generator/technical-plan-template.md` y `skills/spec-generator/tasks-template.md`.

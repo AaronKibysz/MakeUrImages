@@ -1,13 +1,13 @@
 ---
 name: spec-generator
-description: Crea y revisa especificaciones SDD, planes técnicos y listas de tareas del proyecto siguiendo el flujo aprobado y las plantillas de este directorio. Usar cuando se pida una nueva funcionalidad, un plan o tareas.
+description: Crea y revisa especificaciones SDD, planes técnicos y listas de tareas del proyecto siguiendo el flujo aprobado y las plantillas de este directorio. Usar cuando se pida una nueva funcionalidad, un plan técnico, dividir en tareas, una especificación o requisitos.
 ---
 
 # Skill: spec-generator
 
 Procedimiento para crear especificaciones, planes técnicos y tareas en este proyecto.
 
-> Esta skill es documentación del proceso. No se instala ni se activa en OpenCode hasta que el usuario lo apruebe.
+> Esta skill está disponible en OpenCode mediante la configuración del proyecto (`opencode.jsonc`). Se activa cuando la petición coincide con la descripción del frontmatter.
 
 ## Cuándo usarla
 

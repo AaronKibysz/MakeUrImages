@@ -21,6 +21,8 @@ Usar esta plantilla cada vez que se delegue una tarea. Un encargo sin estos camp
 - No modificar configuración de OpenCode, Git ni repositorios de referencia.
 - No sobrescribir archivos existentes fuera de los permitidos.
 - Marcar como "Hipótesis" o "Pendiente" lo que no pueda verificar.
+- Informar una sola vez y no proponer pasos siguientes.
+- No incluir datos del proyecto, clientes ni credenciales en consultas externas.
 
 **Formato de entrega:**
 1. Resumen de 5 líneas como máximo.

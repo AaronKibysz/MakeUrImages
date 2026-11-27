@@ -1,4 +1,4 @@
-# Registro de decisiones
+﻿# Registro de decisiones
 
 Todas las decisiones relevantes se registran aquí o en un ADR propio.
 
@@ -36,6 +36,12 @@ Todas las decisiones relevantes se registran aquí o en un ADR propio.
 | D-018 | Programación | Fuera del MVP. | Ronda 1, P2 |
 | D-019 | Refinamiento IA | Fuera del MVP. | Definición |
 | D-020 | Ajustes por red | Solo técnicos; sin generación por red. | Definición |
+| D-021 | Backend | FastAPI (Python) como backend principal. Ecosistema IA/ML (LangChain, LlamaIndex, HuggingFace). Despliegue en contenedores. | Investigación 2026-11-27, autorizado por el usuario |
+| D-022 | Framework móvil | React Native + Expo (Android e iOS). Cloud builds, OTA updates, mayor pool de contratación. Equipo con experiencia en Python; framework móvil nuevo para el equipo. | Investigación 2026-11-27, autorizado por el usuario |
+| D-023 | Región de despliegue | São Paulo (sa-east-1) como región principal. Catálogo completo GA, ~30-40 ms desde Argentina. Bedrock no disponible; usar APIs directas (OpenAI/Google) para IA. | Investigación 2026-11-27, autorizado por el usuario |
+| D-024 | Base de datos | Supabase (PostgreSQL managed). Ecosistema completo (auth, storage, realtime). Considerar solapamiento con FastAPI; validar en el plan técnico. | Investigación 2026-11-27, autorizado por el usuario |
+| D-025 | Storage de archivos | Cloudflare R2. Egress gratis, 0,015 USD/GB-mes, S3-compatible API, edge en Buenos Aires. | Investigación 2026-11-27, autorizado por el usuario |
+| D-026 | Estilos del catálogo (P-003) | 8 estilos: Fotográfico premium, Ilustración moderna, Minimalista corporativo, Retro/vintage, Gastronómico, Inmobiliario, Lifestyle aspiracional, Geométrico/abstracto. Administrados centralmente, elegidos por el usuario en cada creación. | Propuesta del agente, aprobado por el usuario 2026-11-27 |
 
 ## Decisiones pendientes
 
@@ -43,7 +49,7 @@ Todas las decisiones relevantes se registran aquí o en un ADR propio.
 |---|---|---|---|
 | P-001 | Precios, cantidades y límites de planes | Modelo comercial | Pendiente |
 | P-002 | Créditos de bienvenida (cantidad) | Plan de prueba | Pendiente |
-| P-003 | Nombres y descripciones de los 6 a 8 estilos | Catálogo | Pendiente |
+| P-003 | Nombres y descripciones de los 8 estilos | Catálogo | RESUELTO (D-026) |
 | P-004 | Rango del formato personalizado | Generación | Pendiente |
 | P-005 | Capacidad de biblioteca por plan | Biblioteca | Pendiente |
 | P-006 | Límite de integrantes por organización | Organizaciones | Pendiente |
@@ -51,7 +57,7 @@ Todas las decisiones relevantes se registran aquí o en un ADR propio.
 | P-008 | Políticas de Apple y Google para compra en app (Argentina) | Compra móvil | Pendiente de investigación |
 | P-009 | Requisitos y permisos de la API de Instagram | Publicación Instagram | Pendiente de investigación |
 | P-010 | Requisitos de WhatsApp para Estados y difusiones | Fase 2 | Pendiente de investigación |
-| P-011 | Stack tecnológico | Arquitectura | Pendiente de investigación |
+| P-011 | Stack tecnológico | Arquitectura | RESUELTO (D-021 a D-025) |
 | P-012 | Proveedores de IA y costes | Modelo de costes | Pendiente de investigación |
 | P-013 | Nombre definitivo del producto | Marca | Pendiente |
 | P-014 | Licencia del repositorio | Publicación del código | Pendiente |

@@ -1,4 +1,4 @@
-# MakeUrImages (nombre de trabajo)
+﻿# MakeUrImages (nombre de trabajo)
 
 > Nombre provisional tomado de la carpeta del repositorio. El nombre definitivo del producto está pendiente de decisión.
 
@@ -6,11 +6,12 @@ Plataforma SaaS para crear imágenes y textos promocionales con inteligencia art
 
 ## Estado actual
 
-Fase 0: definición del producto y preparación de la metodología de desarrollo guiado por especificaciones (SDD).
+Fase 1: primera especificación funcional (SPEC-001 Flujo de creación de publicación), aprobada con plan técnico y 52 tareas. Implementación en curso: estructura base del backend (FastAPI) y de la app móvil (Expo) completadas y verificadas. Stack tecnológico aprobado (D-021 a D-026).
 
-- No existe código de aplicación.
-- No hay comandos de instalación, ejecución ni pruebas verificados.
-- El stack tecnológico, la arquitectura y los proveedores **no están aprobados**. Se investigarán en una etapa posterior.
+- Backend: ackend/ (FastAPI, Python). Arranca con uvicorn; endpoint /health responde 200.
+- Móvil: mobile/ (React Native + Expo). Typecheck y bundle Android pasan.
+- Ver comandos de instalación y ejecución en ackend/pyproject.toml y mobile/package.json.
+- Decisiones pendientes: P-001, P-002, P-004, P-005, P-006, P-007, P-008, P-009, P-010, P-012 (ver docs/decisions/README.md).
 
 ## Alcance del MVP (aprobado en la etapa de definición)
 

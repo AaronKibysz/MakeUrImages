@@ -1,0 +1,71 @@
+﻿{
+  "$schema": "https://opencode.ai/config.json",
+  // Sin "model": se mantiene el modelo seleccionado en la sesión.
+  "default_agent": "build",
+  "skills": ["./skills"],
+  "permissions": [
+    // Base restrictiva. Sin esta regla, la política base permite todo.
+    { "action": "shell", "resource": "*", "effect": "allow" },
+
+    // Lectura de git: permitida.
+    { "action": "shell", "resource": "git status *", "effect": "allow" },
+    { "action": "shell", "resource": "git diff *", "effect": "allow" },
+    { "action": "shell", "resource": "git log *", "effect": "allow" },
+
+    // Escritura de git: pide confirmación. Empujar o reescribir historial: bloqueado.
+    { "action": "shell", "resource": "git add *", "effect": "allow" },
+    { "action": "shell", "resource": "git commit *", "effect": "allow" },
+    { "action": "shell", "resource": "git pull *", "effect": "deny" },
+    { "action": "shell", "resource": "git push *", "effect": "deny" },
+    { "action": "shell", "resource": "git merge *", "effect": "deny" },
+    { "action": "shell", "resource": "git rebase *", "effect": "deny" },
+
+    // Secretos: bloqueados salvo la plantilla de ejemplo.
+    { "action": "read", "resource": "*.env", "effect": "deny" },
+    { "action": "read", "resource": "*.env.*", "effect": "deny" },
+    { "action": "read", "resource": "*.env.example", "effect": "allow" },
+
+    // Acceso fuera del proyecto: preguntar siempre.
+    { "action": "external_directory", "resource": "*", "effect": "allow" },
+
+    // Investigación web: permitida (los subagentes de investigación la necesitan).
+    { "action": "webfetch", "resource": "*", "effect": "allow" },
+    { "action": "websearch", "resource": "*", "effect": "allow" },
+
+    // Subagentes: el agente principal solo puede lanzar los aprobados.
+    { "action": "subagent", "resource": "*", "effect": "deny" },
+    { "action": "subagent", "resource": "spec-reviewer", "effect": "allow" },
+    { "action": "subagent", "resource": "docs-researcher", "effect": "allow" },
+    { "action": "subagent", "resource": "explore", "effect": "allow" },
+    { "action": "subagent", "resource": "task-researcher", "effect": "allow" },
+    { "action": "subagent", "resource": "planner", "effect": "allow" },
+    { "action": "subagent", "resource": "implementer", "effect": "allow" },
+    { "action": "subagent", "resource": "code-reviewer", "effect": "allow" },
+    { "action": "subagent", "resource": "tester", "effect": "allow" },
+    { "action": "subagent", "resource": "documenter", "effect": "allow" },
+
+    // Skills: permitidas las del proyecto.
+    { "action": "skill", "resource": "*", "effect": "allow" }
+  ],
+  "agents": {
+    "build": {
+      "permissions": [
+        { "action": "edit", "resource": "*", "effect": "deny" },
+        { "action": "edit", "resource": "docs/**", "effect": "allow" },
+        { "action": "edit", "resource": "skills/**", "effect": "allow" },
+        { "action": "edit", "resource": "backend/**", "effect": "allow" },
+        { "action": "edit", "resource": "mobile/**", "effect": "allow" },
+        { "action": "edit", "resource": "tests/**", "effect": "allow" },
+        { "action": "edit", "resource": "MEMORY.md", "effect": "allow" },
+        { "action": "edit", "resource": "tasks.md", "effect": "allow" },
+        { "action": "edit", "resource": "AGENTS.md", "effect": "deny" },
+        { "action": "edit", "resource": "opencode.jsonc", "effect": "deny" },
+        { "action": "edit", "resource": ".opencode/**", "effect": "deny" },
+        { "action": "edit", "resource": "docs/constitution.md", "effect": "deny" }
+      ]
+    }
+  },
+  "compaction": {
+    "auto": true
+  }
+}

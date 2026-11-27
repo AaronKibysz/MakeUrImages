@@ -1,6 +1,6 @@
 # Propuesta de configuración de OpenCode
 
-- **Estado:** Propuesta. **No aplicada.**
+- **Estado:** Aplicada el 2026-11-27. Ver `opencode.jsonc`, `.opencode/agents/` y `skills/agent-research/`.
 - **Fecha de verificación:** 2026-11-27
 - **Versión instalada:** OpenCode v2.3.2 (`opencode --version`)
 - **Fuentes oficiales consultadas:**
@@ -343,7 +343,7 @@ Las reglas se evalúan en orden y gana la última que coincide. Por eso las dene
 
 ## 13. Decisiones nuevas de la revisión complementaria
 
-Hallazgos en `docs/agent-context/research/2026-11-27-claude-code-pending-review.md`. **Pendientes de aprobación.**
+Hallazgos en `docs/agent-context/research/2026-11-27-claude-code-pending-review.md`. **Aprobados el 2026-11-27 y aplicados a los documentos** (`AGENTS.md` §3.1, §3.2, §4, §5 y §8; `docs/constitution.md` §8 y puntos 25 y 26). La configuración de OpenCode sigue sin aplicar y requiere aprobación de §3 y §12.5.
 
 1. **Archivos protegidos:** ningún agente edita `AGENTS.md`, `opencode.jsonc`, `.opencode/**` ni `docs/constitution.md`. Solo lo cambia el usuario (ajuste §12.5).
 2. **Prohibiciones duras:** lista de cinco prohibiciones en la constitución, que ningún encargo levanta.

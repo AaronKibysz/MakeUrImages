@@ -56,7 +56,7 @@ Nombre comercial, logotipo, colores, tipografías, datos de contacto, material i
 - Catálogo predefinido, administrado centralmente.
 - El usuario elige estilo en cada creación.
 - No hay estilo obligatorio por organización.
-- MVP: 6 a 8 estilos. Nombres y descripciones pendientes.
+- MVP: 8 estilos (D-026): Fotográfico premium, Ilustración moderna, Minimalista corporativo, Retro/vintage, Gastronómico, Inmobiliario, Lifestyle aspiracional, Geométrico/abstracto. Nombres y descripciones aprobados el 2026-11-27.
 
 ## 7. Formatos
 
